@@ -8,8 +8,9 @@ Blog::Application.routes.draw do
   resources :posts
   root 'welcome#index'
 
-  get "/posts/:id(.:format)" =>   "posts#show"
-  get "/posts(.:format)"     =>   "posts#index"
+  get "/posts/:id(.:format)"   =>   "posts#show"
+  get "/posts(.:format)"       =>   "posts#index"
+  delete "posts/:id(.:format)" =>   "posts#destroy"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
